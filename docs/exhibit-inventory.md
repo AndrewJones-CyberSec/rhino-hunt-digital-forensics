@@ -2,7 +2,7 @@
 
 Case DF-2026-001 · Updated November 17, 2026
 
-Nine image recovery occurrences; eight distinct SHA-256 digests. The nine-distinct-image objective remains open.
+Ten image recovery occurrences; nine distinct SHA-256 digests and nine visually distinct images. Objective met.
 
 | Exhibit | Source | Filename | SHA-256 |
 | --- | --- | --- | --- |
@@ -15,12 +15,13 @@ Nine image recovery occurrences; eight distinct SHA-256 digests. The nine-distin
 | E-07 | HTTP | `rhino4.jpg` | `e1c01da391669adf3559d2d87bf2157b37e27a936a1ae66c77b61e6b5b7bc4a6` |
 | E-08 | HTTP | `rhino5.gif` | `f36ecc12967d5622cdc70e73d2468fab28a65db944d3157256a7212afa05b056` |
 | E-09 | Encrypted ZIP | `rhino2.jpg` | `b4f6bbb8d846d6505c9b5b67f115656fdf980a484aa441078a838a3ffc2ac705` |
+| E-10 | USB steganography | `rhino6.jpg` | `6dbf775b8999a006ffa74c65127e5add64234184bd2f425b2ad644e8c0d19345` |
 
 ## Duplicate and scope
 
 E-02 and E-09 have the same SHA-256 digest. They are counted as separate recovery occurrences but one unique byte sequence. All four tagged USB exports matched their corresponding original report exports; these extra report copies, thumbnails, and interface graphics are excluded from the tally.
 
-The examiner supplied PowerShell SHA-256 outputs for the USB and network image exports. The network hashes match independently reconstructed network payloads; the archive entry hash was independently calculated from the supplied extracted JPEG. The original USB image was not supplied for independent verification. Different hashes do not necessarily imply visually different photographs.
+The examiner supplied PowerShell SHA-256 outputs for the USB and network image exports. The network hashes match independently reconstructed network payloads; the archive entry hash was independently calculated from the supplied extracted JPEG. The original USB image was subsequently supplied and its reference MD5 matched. Independent carving also reproduced the four USB hashes. E-10 was extracted from `alligator2.jpg` after a guided steganography follow-up and its MD5 matched the published solution. The examiner reports reproducing the dictionary workflow; the exact terminal transcript was not retained. A potential tenth distinct image remains unverified. Different hashes alone do not necessarily imply visually different photographs.
 
 ## Reproduction (PowerShell)
 
