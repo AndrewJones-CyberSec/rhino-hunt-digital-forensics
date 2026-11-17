@@ -1,0 +1,11 @@
+upload/
+evidence/
+*.dd
+*.pcap
+*.pcapng
+*.log
+*.exe
+*.zip
+*.hash
+*.pot
+__pycache__/
